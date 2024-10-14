@@ -1,0 +1,111 @@
+local Library = loadstring(game: HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Cactus HuB Private", "Ocean")
+
+--MAIN
+local Main = Window:NewTab("G3neral")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection: NewButton("Infinite Yield)", "basic", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+
+local M4in = Window:NewTab("Rivals")
+local m4inSection = M4in:NewSection("KEY GUI")
+
+m4inSection: NewButton("rivals gui (NEEDS KEY)", "not tested yet", function()
+    loadstring(game: HttpGet('https://raw.githubusercontent.com/rybowe/rybowescripts/main/release.lua'))()
+end)
+
+
+local BSMAIN = Window:NewTab("PRISON LIFE")
+    local BSSection = BSMAIN:NewSection("GUI")
+
+
+BSSection: NewButton("Zephyr's OP GUI", "too op lmfao", function()
+    loadstring(game: HttpGet("https://raw.githubusercontent.com/Unknownlodfc/Zephyr/refs/heads/main/Zephyr%20%7C%20Prison%20Life"))()
+end)
+
+
+local ByMain = Window:NewTab("Bypasser")
+local BySection = ByMain:NewSection("chat fucker")
+
+
+BySection: NewButton("BetterBypasser", "pro tip: dont say anything sexual cuz you can get banned!!11!", function()
+    loadstring(game: HttpGetAsync("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua"))()
+end)
+
+
+BySection:NewButton("catbypasser v1.5", "other bypasser", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/shadow62x/catbypass/main/upfix"))()
+end)
+
+
+local PMAIN = Window:NewTab("nigga")
+local PSection = PMAIN:NewSection("player")
+
+
+PSection:NewToggle("Spinbot (DOESNT GO OFF)", "just spinbot", function(state)
+    if state then
+        power = 250 -- change this to make it more or less powerful
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+else
+        power = 0 -- change this to make it more or less powerful
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    end
+end)
+
+
+
+PSection:NewToggle("God-Human", "Embrace The Power Of Gods", function(state)
+    if state then
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+else
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+
+PSection:NewToggle("Fly (FINALLY WORKS)", "FLYYYY", function(state)
+    if state then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    else
+        print("Toggle Off")
+    end
+end)
+
+
+PSection:NewSlider("walkspeed again lmfao", "niggers smell", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+PSection:NewSlider("JumpPower", "SliderInfo", 500, 50, function(s) -- 500 (MaxValue) | 50 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
