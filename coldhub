@@ -1,5 +1,5 @@
 local Library = loadstring(game: HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Cactus HuB Private", "Ocean")
+local Window = Library.CreateLib("Cold HuB Private", "Ocean")
 
 --MAIN
 local Main = Window:NewTab("G3neral")
